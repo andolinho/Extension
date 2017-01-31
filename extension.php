@@ -2,7 +2,7 @@
 
 class pig
 {
-	public $name="";
+	private $name="babe";
 	public $weight="";
 	
 	public function setweight($weight)
@@ -17,12 +17,16 @@ class pig
 }
  
 class wildpig extends pig {
-  // The  child can use the parent's class code
+  
+  function happyPig()
+  {
+	  echo "Yeah, whole ".$this->weight." Kilogramms. Just ". (2 * $this->weight)/3 . " to go. Iam ".$this->name."."; 
+  }
 }
 
 
 $oinki = new wildpig;
 $oinki->setweight(42);
-$oinki -> showWeight();
+$oinki -> happyPig();
 
 ?>
